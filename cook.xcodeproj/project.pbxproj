@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C735EB42245BBC100058D66 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C75331D2245B5A70063913E /* Pacifico-Regular.ttf */; };
 		9C735EB62245C15E00058D66 /* invitationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C735EB52245C15E00058D66 /* invitationTable.swift */; };
+		9C735EB82246323E00058D66 /* InvitationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C735EB72246323E00058D66 /* InvitationListCell.swift */; };
 		9C7533072245A6430063913E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7533062245A6430063913E /* AppDelegate.swift */; };
 		9C7533092245A6430063913E /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7533082245A6430063913E /* MainPageViewController.swift */; };
 		9C7533112245A6450063913E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C75330F2245A6450063913E /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 		5C7A29EDABB4D66329626C0F /* Pods-cook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cook.debug.xcconfig"; path = "Target Support Files/Pods-cook/Pods-cook.debug.xcconfig"; sourceTree = "<group>"; };
 		725CE383BA5180B1CCA4E025 /* Pods_cook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C735EB52245C15E00058D66 /* invitationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invitationTable.swift; sourceTree = "<group>"; };
+		9C735EB72246323E00058D66 /* InvitationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationListCell.swift; sourceTree = "<group>"; };
 		9C7533032245A6430063913E /* cook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7533062245A6430063913E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C7533082245A6430063913E /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				9C7533062245A6430063913E /* AppDelegate.swift */,
 				9C7533082245A6430063913E /* MainPageViewController.swift */,
 				9C735EB52245C15E00058D66 /* invitationTable.swift */,
+				9C735EB72246323E00058D66 /* InvitationListCell.swift */,
 				9C75331A2245AC470063913E /* Assets.xcassets */,
 				9C75330F2245A6450063913E /* LaunchScreen.storyboard */,
 				9C7533122245A6450063913E /* Info.plist */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C735EB82246323E00058D66 /* InvitationListCell.swift in Sources */,
 				9C7533092245A6430063913E /* MainPageViewController.swift in Sources */,
 				9C735EB62245C15E00058D66 /* invitationTable.swift in Sources */,
 				9C7533072245A6430063913E /* AppDelegate.swift in Sources */,

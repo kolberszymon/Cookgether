@@ -79,6 +79,17 @@ class MainPageViewController: UIViewController {
         return label
     }()
     
+    let invStackView: UIStackView = {
+       
+        let stackView = UIStackView(arrangedSubviews: [InvitationListCell(),InvitationListCell(),InvitationListCell(), InvitationListCell()])
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = .gray
+        stackView.spacing = 35
+        return stackView
+    }()
+    
     //MARK: -functions
     
     @objc func createMeal() {
@@ -93,10 +104,18 @@ class MainPageViewController: UIViewController {
         view.addSubview(logoCircle)
         view.addSubview(logoLabel)
         view.addSubview(zaproszeniaLabel)
-        view.addSubview(invitationTable)
+        view.addSubview(invStackView)
         
-        invitationTable.register(UITableViewCell.self, forCellReuseIdentifier: invitationCellId)
-        invitationTable.dataSource = self
+//        view.addSubview(invitationTable)
+        
+//        invitationTable.register(UITableViewCell.self, forCellReuseIdentifier: invitationCellId)
+//        invitationTable.dataSource = self
+//
+//
+//        //getting rid of extra cells
+//
+//        invitationTable.tableFooterView = UIView()
+//        invitationTable.alwaysBounceVertical = false
         
         setUpItems()
         
@@ -122,12 +141,17 @@ class MainPageViewController: UIViewController {
         zaproszeniaLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         zaproszeniaLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
         
-        invitationTable.topAnchor.constraint(equalTo: zaproszeniaLabel.bottomAnchor, constant: 15).isActive = true
-        invitationTable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
-        invitationTable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
-        invitationTable.bottomAnchor.constraint(equalTo: logoCircle.topAnchor, constant: -40).isActive = true
-
+        invStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        invStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
+        invStackView.topAnchor.constraint(equalTo: zaproszeniaLabel.bottomAnchor, constant: 15).isActive = true
+        invStackView.bottomAnchor.constraint(equalTo: logoCircle.topAnchor, constant: -40).isActive = true
         
+//        invitationTable.topAnchor.constraint(equalTo: zaproszeniaLabel.bottomAnchor, constant: 15).isActive = true
+//        invitationTable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+//        invitationTable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
+//        invitationTable.bottomAnchor.constraint(equalTo: logoCircle.topAnchor, constant: -40).isActive = true
+//
+//
     }
     
     
@@ -144,11 +168,18 @@ extension MainPageViewController: UITableViewDataSource {
         
         cell.textLabel?.text = "Siemano"
         cell.textLabel?.textColor = .black
+        cell.translatesAutoresizingMaskIntoConstraints = false
+        cell.leadingAnchor.constraint(equalTo: invitationTable.leadingAnchor, constant: 20).isActive = true
+        cell.trailingAnchor.constraint(equalTo: invitationTable.trailingAnchor, constant: -20).isActive = true
+        cell.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        cell.backgroundColor = .gray
         
         return cell
     }
     
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 }
 
 

@@ -11,7 +11,7 @@ import UIKit
 var invitationTable: UITableView = {
     
     let invitationTableView = UITableView()
-    invitationTableView.backgroundColor = .gray
+    invitationTableView.backgroundColor = .clear
     
     invitationTableView.translatesAutoresizingMaskIntoConstraints = false
     
